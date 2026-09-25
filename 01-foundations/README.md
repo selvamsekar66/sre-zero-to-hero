@@ -1,28 +1,73 @@
-﻿# foundations
+﻿# SRE Foundations
 
-This section is part of the **SRE Zero to Hero** learning journey.
+Welcome to the first step of SRE Zero to Hero.
 
-## Learning Approach
+This section explains the fundamentals of Site Reliability Engineering
+before we start learning Linux, Cloud, Kubernetes, Observability,
+Terraform and other technologies.
 
-- Understand the fundamentals
-- Build hands-on examples
-- Practice troubleshooting
-- Apply SRE principles
-- Document real-world scenarios
-- Automate where possible
+The goal is simple:
 
-## Topics
+Understand the problem first.
+Then learn the technology used to solve it.
 
-Topics will be added progressively.
+## What you will learn
 
-## Labs
+1. What is SRE?
+2. Why did SRE evolve?
+3. How SRE is related to DevOps
+4. How modern systems changed
+5. What reliability actually means
+6. Important SRE terminology
+7. How SRE teams work
+8. What an SRE does
+9. How reliability is measured
+10. A simple real-world SRE example
 
-Hands-on labs will be linked here as they are created.
+## Learning Path
 
-## Troubleshooting
+01. What is SRE?
+        ↓
+02. Evolution of SRE
+        ↓
+03. Traditional Operations → DevOps → SRE
+        ↓
+04. Reliability Fundamentals
+        ↓
+05. SRE Terminology
+        ↓
+06. SRE Principles
+        ↓
+07. Real-world SRE Example
+        ↓
+08. Foundation Lab
 
-Relevant troubleshooting scenarios will be added as the section evolves.
+## Prerequisites
 
-## References
+None.
 
-Official documentation and high-quality learning resources will be added here.
+This section is designed for:
+
+- Fresh graduates
+- Developers moving into SRE
+- System administrators
+- Cloud engineers
+- DevOps engineers
+- Operations engineers
+- Experienced IT professionals from other backgrounds
+
+## By the end
+
+You should be able to explain:
+
+"What is SRE?"
+
+"Why do organizations need SRE?"
+
+"What does an SRE actually do?"
+
+"What are SLI, SLO, SLA and Error Budget?"
+
+"How does SRE relate to DevOps?"
+
+"How does reliability affect the business?"
