@@ -387,7 +387,7 @@ The goal is to learn, improve, and reduce the chance or impact of future failure
 
 Consider a web application.
 
-            ```text
+            
                       USERS
                         |
                         v
@@ -403,7 +403,7 @@ Consider a web application.
                      |
                      v
                External Services
-            ```
+            
 
 An SRE thinks about questions such as:
 
