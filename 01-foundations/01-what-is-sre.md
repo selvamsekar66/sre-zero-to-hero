@@ -73,13 +73,15 @@ Instead of manually restarting a failed service every time:
 
 An SRE may look for a better engineering solution:
 
+```text
 Service fails
-     ↓
+   ↓
 Engineer receives alert
-     ↓
+   ↓
 Engineer investigates
-     ↓
+   ↓
 Engineer restarts service
+```
 
 However, automation should not be added blindly.
 
@@ -90,11 +92,11 @@ Good automation should have appropriate guardrails and should reduce operational
 The goal is to:
 
 Engineer a better and more reliable system.
-3. SRE in one simple sentence
+## 3. SRE in one simple sentence
 
 You can think about SRE like this:
 
-SRE = Software Engineering applied to Reliability and Operations
+> SRE = Software Engineering applied to Reliability and Operations
 
 This is a simple mental model rather than a formal definition.
 
@@ -104,21 +106,23 @@ An SRE thinks about the reliability of the entire service.
 
 That can include:
 
+```text
 Users
-  ↓
+   ↓
 Application
-  ↓
+   ↓
 Services
-  ↓
+   ↓
 APIs
-  ↓
+   ↓
 Databases
-  ↓
+   ↓
 Infrastructure
-  ↓
+   ↓
 Network
-  ↓
+   ↓
 Cloud / Data Center
+```
 
 A failure at any layer can affect the user.
 
@@ -128,50 +132,53 @@ SRE focuses on the reliability of the service experienced by users, not just the
 
 For example:
 
+```text
 Server: UP
 CPU: Normal
 Memory: Normal
+```
 
 But...
 
+```text
 Checkout API: Failing
 Payments: Failing
 Users: Cannot complete purchases
+```
 
 Therefore:
 
-Infrastructure may look healthy
-while the service is unhealthy.
+> Infrastructure may look healthy while the service is unhealthy.
 
 This is one of the most important SRE concepts to understand.
 
-4. What does "reliability" mean?
+## 4. What does "reliability" mean?
 
 Reliability means that a system performs its intended function consistently when users need it.
 
 For a customer-facing application, reliability can involve:
 
-Availability
+### Availability
 
 Is the service available when users need it?
 
-Performance
+### Performance
 
 Does the service respond within an acceptable amount of time?
 
-Scalability
+### Scalability
 
 Can the system handle increasing traffic?
 
-Resilience
+### Resilience
 
 Can the system continue operating when something fails?
 
-Recoverability
+### Recoverability
 
 Can the system recover quickly after a failure?
 
-Durability
+### Durability
 
 Can the system preserve important data correctly despite failures?
 
@@ -181,27 +188,29 @@ So reliability is much more than:
 
 A server can be up while the application is still failing.
 
-5. SRE is not just monitoring
+## 5. SRE is not just monitoring
 
 This is an important distinction.
 
 A common beginner assumption is:
 
-SRE = Monitoring
+> SRE = Monitoring
 
 Monitoring is certainly important, but SRE is much broader.
 
-                 SRE
-                  │
-      ┌───────────┼───────────┐
-      │           │           │
-  Monitoring  Automation  Reliability
-      │           │           │
- Observability Engineering  Incidents
-      │                       │
-  Metrics                  Recovery
-  Logs                     Postmortems
-  Traces                   Improvement
+   ```text
+                SRE
+                 │
+        ┌───────────┼───────────┐
+        │           │           │
+     Monitoring  Automation  Reliability
+        │           │           │
+    Observability Engineering  Incidents
+        │                       │
+     Metrics                  Recovery
+     Logs                     Postmortems
+     Traces                   Improvement
+   ```
 
 Depending on the organization, an SRE may work with:
 
@@ -225,7 +234,7 @@ The important point is:
 
 Monitoring is one part of SRE, not the definition of SRE.
 
-6. SRE and software engineering
+## 6. SRE and software engineering
 
 The word Engineering in SRE is important.
 
@@ -233,6 +242,7 @@ In some environments, operations teams may spend significant time performing rep
 
 For example:
 
+```text
 Check server
 Restart service
 Clear disk
@@ -240,6 +250,7 @@ Update configuration
 Deploy manually
 Check logs
 Repeat
+```
 
 If an engineer performs the same task repeatedly, an SRE asks:
 
@@ -247,14 +258,14 @@ If an engineer performs the same task repeatedly, an SRE asks:
 
 That could mean:
 
-Writing a script
-Building automation
-Improving the architecture
-Creating a self-healing mechanism
-Improving deployment processes
-Adding better observability
-Removing the root cause
-Building a platform or reusable solution
+- Writing a script
+- Building automation
+- Improving the architecture
+- Creating a self-healing mechanism
+- Improving deployment processes
+- Adding better observability
+- Removing the root cause
+- Building a platform or reusable solution
 
 This type of repetitive operational work is commonly referred to as toil in SRE.
 
@@ -264,7 +275,7 @@ The mindset is:
 
 Don't just keep fixing the same problem. Look for ways to engineer the problem away.
 
-7. SRE and business
+## 7. SRE and business
 
 Reliability is not only a technical problem.
 
@@ -274,15 +285,17 @@ Imagine a payment application.
 
 If the payment service is unavailable:
 
+```text
 Technical failure
-       ↓
+   ↓
 Payment fails
-       ↓
+   ↓
 Customer cannot complete purchase
-       ↓
+   ↓
 Revenue may be affected
-       ↓
+   ↓
 Customer experience is affected
+```
 
 This is why SRE connects technology with business outcomes.
 
@@ -294,47 +307,47 @@ The goal of SRE is therefore not simply to keep infrastructure running.
 
 It is to provide reliable services that meet user and business needs.
 
-8. What problems does SRE try to solve?
+## 8. What problems does SRE try to solve?
 
 Some common problems include:
 
-Frequent incidents
+### Frequent incidents
 
 The same problem happens repeatedly.
 
 SRE looks for ways to eliminate or reduce the underlying cause.
 
-Too much manual work
+### Too much manual work
 
 Engineers spend large amounts of time performing repetitive operational tasks.
 
 SRE looks for opportunities to automate or improve the process.
 
-Poor visibility
+### Poor visibility
 
 Teams don't know what is happening inside their systems.
 
 SRE improves monitoring and observability.
 
-Uncontrolled changes
+### Uncontrolled changes
 
 Changes and deployments can introduce reliability problems.
 
 SRE uses engineering practices to make changes safer and more measurable.
 
-Scaling problems
+### Scaling problems
 
 The system works with 1,000 users but struggles with 100,000.
 
 SRE considers capacity and scalability.
 
-Slow incident recovery
+### Slow incident recovery
 
 Problems take hours to identify and recover from.
 
 SRE improves detection, response, recovery, and learning from incidents.
 
-9. A simple SRE mindset
+## 9. A simple SRE mindset
 
 Instead of thinking:
 
@@ -370,75 +383,79 @@ The goal is not only to restore the service.
 
 The goal is to learn, improve, and reduce the chance or impact of future failures.
 
-10. A simple real-world example
+## 10. A simple real-world example
 
 Consider a web application.
 
-                    USERS
-                      |
-                      v
-                Load Balancer
-                      |
-                      v
-              Application Servers
-                      |
-              ┌───────┴───────┐
-              |               |
-              v               v
-           Database         Cache
-              |
-              v
-        External Services
+            ```text
+                      USERS
+                        |
+                        v
+                  Load Balancer
+                        |
+                        v
+                     Application Servers
+                        |
+                     ┌───────┴───────┐
+                     |               |
+                     v               v
+                  Database         Cache
+                     |
+                     v
+               External Services
+            ```
 
 An SRE thinks about questions such as:
 
-Availability
+### Availability
 
 What happens if one application server fails?
 
-Performance
+### Performance
 
 What happens if database response time increases?
 
-Scalability
+### Scalability
 
 What happens when traffic increases 10 times?
 
-Observability
+### Observability
 
 How do we know which component is causing the problem?
 
-Incident response
+### Incident response
 
 Who is alerted when the service starts failing?
 
-Recovery
+### Recovery
 
 Can the system recover safely?
 
-Resilience
+### Resilience
 
 What happens if an external dependency becomes unavailable?
 
-Capacity
+### Capacity
 
 How much traffic can the system handle?
 
-Dependencies
+### Dependencies
 
 What happens if a service outside our control becomes unavailable?
 
 For example:
 
+```text
 Your Application
-      |
-      +---- Database
-      |
-      +---- Payment Provider
-      |
-      +---- Authentication Provider
-      |
-      +---- External API
+   |
+   +---- Database
+   |
+   +---- Payment Provider
+   |
+   +---- Authentication Provider
+   |
+   +---- External API
+```
 
 Modern applications depend on many components and external services.
 
@@ -446,20 +463,20 @@ A reliable system must consider not only its own components, but also the behavi
 
 These questions lead us toward the deeper SRE concepts we will learn later.
 
-11. SRE is a journey, not a tool
+## 11. SRE is a journey, not a tool
 
 SRE is not a specific product or technology.
 
 You don't become an SRE simply by learning:
 
-Splunk
-Dynatrace
-Prometheus
-Grafana
-AWS
-Kubernetes
-Terraform
-Python
+- Splunk
+- Dynatrace
+- Prometheus
+- Grafana
+- AWS
+- Kubernetes
+- Terraform
+- Python
 
 These are tools and technologies that can help an SRE solve problems.
 
@@ -471,6 +488,7 @@ Then choosing the appropriate engineering approach and technology.
 
 For example:
 
+```text
 Problem
    ↓
 Need visibility
@@ -480,9 +498,11 @@ Observability
 Metrics + Logs + Traces
    ↓
 Choose appropriate tools
+```
 
 A broader way to think about SRE is:
 
+```text
 Problem
    ↓
 Reliability requirement
@@ -496,50 +516,51 @@ Technology / Tool
 Implementation
    ↓
 Measurement
+```
 
 The tool comes after understanding the problem.
 
-12. Key takeaways
+## 12. Key takeaways
 
 After this lesson, you should understand:
 
-SRE stands for Site Reliability Engineering.
-SRE applies software engineering practices to reliability and operations.
-Reliability is broader than simply keeping a server running.
-SRE focuses on the reliability of the service experienced by users.
-A system can have healthy infrastructure while the user-facing service is unhealthy.
-SRE considers availability, performance, scalability, resilience, recoverability, and durability.
-Automation is an important part of SRE, but it should have appropriate guardrails.
-Monitoring is important, but SRE is much broader than monitoring.
-SRE connects technical reliability with customer and business impact.
-Repetitive operational work is commonly referred to as toil.
-SRE focuses on solving recurring problems rather than repeatedly performing manual fixes.
-Tools are important, but understanding the underlying problem is more important.
-13. Beginner check
+- SRE stands for Site Reliability Engineering.
+- SRE applies software engineering practices to reliability and operations.
+- Reliability is broader than simply keeping a server running.
+- SRE focuses on the reliability of the service experienced by users.
+- A system can have healthy infrastructure while the user-facing service is unhealthy.
+- SRE considers availability, performance, scalability, resilience, recoverability, and durability.
+- Automation is an important part of SRE, but it should have appropriate guardrails.
+- Monitoring is important, but SRE is much broader than monitoring.
+- SRE connects technical reliability with customer and business impact.
+- Repetitive operational work is commonly referred to as toil.
+- SRE focuses on solving recurring problems rather than repeatedly performing manual fixes.
+- Tools are important, but understanding the underlying problem is more important.
+## 13. Beginner check
 
 Before moving to the next lesson, try answering these questions without looking back.
 
-Question 1
+### Question 1
 
 What does SRE stand for?
 
-Question 2
+### Question 2
 
 Explain SRE in your own words.
 
-Question 3
+### Question 3
 
 Why do organizations need SRE?
 
-Question 4
+### Question 4
 
 Is SRE the same as monitoring?
 
-Question 5
+### Question 5
 
 Why is automation important in SRE?
 
-Question 6
+### Question 6
 
 What is the difference between:
 
@@ -548,25 +569,25 @@ What is the difference between:
 and:
 
 "The service is reliable"
-Question 7
+### Question 7
 
 Why does reliability matter to the business?
 
-Question 8
+### Question 8
 
 A server is healthy, but users cannot complete payments.
 
 Is the service reliable? Why?
 
-Question 9
+### Question 9
 
 Why isn't restarting a failed service always a complete solution?
 
-Question 10
+### Question 10
 
 What is the difference between monitoring infrastructure and understanding service reliability?
 
-14. What's next?
+## 14. What's next?
 
 Now that we understand what SRE is, the next question is:
 
@@ -574,9 +595,10 @@ Why did SRE come into existence?
 
 In the next lesson, we will look at how software operations evolved from traditional IT operations toward DevOps and SRE.
 
-Next: Evolution of SRE
+**Next:** Evolution of SRE
 
-References
-AWS — What is Site Reliability Engineering (SRE)?
-Dynatrace — Site Reliability Engineering
-Google Cloud Skills — SRE learning path
+## References
+
+- [AWS - What is Site Reliability Engineering (SRE)?](https://aws.amazon.com/what-is/sre/)
+- [Dynatrace - Site Reliability Engineering](https://www.dynatrace.com/news/blog/what-is-site-reliability-engineering/)
+- [Google Cloud Skills - SRE learning path](https://www.cloudskillsboost.google/paths/20)
