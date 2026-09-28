@@ -1,22 +1,35 @@
 # SRE Zero to Hero
 
-This is my journey to build a deeper and more practical understanding of Site Reliability Engineering.
+A practical learning journey focused on Site Reliability Engineering, production systems, and operational excellence.
 
-I have been working in the observability and SRE space for several years, but I believe good SREs should understand more than just monitoring tools.
+This repository is my attempt to go beyond dashboards and monitoring tools and understand how systems actually behave under real-world conditions.
 
-A production issue does not always start with an alert.
-
-It can start with CPU saturation, memory pressure, a network problem, a slow database query, a bad deployment, a dependency failure, or a design decision that does not scale.
-
-So this repository is my attempt to go deeper — from the fundamentals of computing and Linux to distributed systems, cloud, Kubernetes, observability, reliability engineering, incident management, automation and AIOps.
+> A production issue rarely starts with an alert. It often begins with CPU saturation, memory pressure, a network problem, a slow query, a bad deployment, a dependency failure, or a design decision that does not scale.
 
 ---
 
-## What I am trying to build
+## Overview
 
-The goal is not to collect notes or complete tutorials.
+I have spent years working in observability and SRE-related areas, but I believe strong SREs need a deeper understanding of the entire stack:
 
-The goal is to understand how production systems work and how an SRE approaches them.
+- computing fundamentals
+- Linux internals
+- networking
+- storage
+- databases
+- distributed systems
+- cloud architecture
+- containers and Kubernetes
+- observability
+- incident response
+- automation
+- AIOps and GenAI for operations
+
+The goal is not to collect notes or complete tutorials. The goal is to understand how production systems work and how an SRE thinks when things break.
+
+---
+
+## Learning Loop
 
 My learning loop is:
 
@@ -50,79 +63,74 @@ The journey is structured across the following areas:
 20. AIOps
 21. GenAI for SRE
 
-The order is intentional.
-
-I want to understand the underlying systems before jumping into advanced tooling and automation.
+The order is intentional: I want to understand the underlying systems before jumping into advanced tooling and automation.
 
 ---
 
 ## How I am learning
 
-For each important topic, I will try to cover three levels.
+For each important topic, I try to cover three levels.
 
 ### Beginner
 
 Understand the fundamentals.
 
-What is it?
-Why does it exist?
-How does it work?
+- What is it?
+- Why does it exist?
+- How does it work?
 
 ### Intermediate
 
 Work with it.
 
-Configure it, monitor it and build something with it.
+- Configure it
+- Monitor it
+- Build something with it
 
 ### Advanced
 
 Think like an SRE.
 
-Troubleshoot failures, understand bottlenecks, design for reliability, automate repetitive work and understand the impact on production.
+- Troubleshoot failures
+- Understand bottlenecks
+- Design for reliability
+- Automate repetitive work
+- Evaluate impact on production
 
 ---
 
 ## What you will find in this repository
 
 ### Concepts
-
-Important SRE, infrastructure and engineering concepts explained in simple language.
+Important SRE, infrastructure, and engineering concepts explained in simple language.
 
 ### Labs
-
-Hands-on experiments to understand how systems behave.
+Hands-on experiments to understand how systems behave in practice.
 
 ### Troubleshooting
-
-Realistic failure scenarios and the process used to investigate them.
+Realistic failure scenarios and investigation steps to diagnose issues systematically.
 
 ### Runbooks
-
 Practical steps for handling common production problems.
 
 ### Incident Response
-
-Incident scenarios, investigation, mitigation and postmortems.
+Incident scenarios, mitigation strategies, and postmortems.
 
 ### System Design
-
-Designing reliable, scalable and observable systems.
+Designing reliable, scalable, and observable systems.
 
 ### Projects
-
-End-to-end projects that bring multiple concepts together.
+End-to-end projects that connect multiple concepts together.
 
 ### Automation
-
 Scripts and workflows that reduce repetitive operational work.
 
 ### AIOps & GenAI
-
-Exploring how AI can help with observability, troubleshooting, incident response and operational automation.
+Exploring how AI can help with observability, troubleshooting, incident response, and operational automation.
 
 ---
 
-## A few principles I want to follow
+## Principles
 
 - Learn the fundamentals before the tools.
 - Prefer understanding over memorization.
@@ -140,17 +148,15 @@ Exploring how AI can help with observability, troubleshooting, incident response
 
 This is a work in progress.
 
-I expect this repository to evolve over the next 4–6 months as I learn, experiment, build projects and document what I discover.
+I expect this repository to evolve over the next 4–6 months as I learn, experiment, build projects, and document what I discover.
 
-The goal is not to finish a checklist.
-
-The goal is to become better at understanding and operating reliable production systems.
+The goal is not to finish a checklist. The goal is to become better at understanding and operating reliable production systems.
 
 ---
 
-## Learning Resources
+## Learning resources
 
-I will reference official documentation, books, engineering blogs and other reliable resources wherever possible.
+I will reference official documentation, books, engineering blogs, and other reliable resources wherever possible.
 
 Some of the resources I expect to use include:
 
@@ -165,14 +171,14 @@ Some of the resources I expect to use include:
 
 ---
 
-## Follow the Journey
+## Follow the journey
 
-I will also share selected learnings, labs and lessons from this repository on LinkedIn.
+I will also share selected learnings, labs, and lessons from this repository on LinkedIn.
 
-If something here helps you, improves your understanding, or you see something that can be done better, feel free to open an issue or start a discussion.
+If something here helps you, improves your understanding, or you see an opportunity to improve it, feel free to open an issue or start a discussion.
 
 ---
 
-**Learn the system.  
-Understand the failure.  
-Improve the reliability.**
+> Learn the system.  
+> Understand the failure.  
+> Improve the reliability.
