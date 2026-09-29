@@ -1,4 +1,4 @@
-# Day 5 — Monitoring & Observability 🔭
+# Day 5 — Monitoring & Observability 
 
 > **Goal:** Understand how SREs monitor systems, investigate problems, and use observability to understand what is happening inside a system.
 
@@ -106,7 +106,7 @@ These signals complement each other.
 
 ---
 
-## 4. Metrics 📊
+## 4. Metrics 
 
 Metrics are **numeric measurements collected over time**.
 
@@ -181,7 +181,7 @@ This is useful because averages can hide slow requests.
 
 ---
 
-## 5. Logs 📝
+## 5. Logs 
 
 Logs are records of events that happened inside an application or system.
 
@@ -225,7 +225,7 @@ Structured logs are easier to search, filter, and analyze.
 
 ---
 
-## 6. Traces 🔗
+## 6. Traces 
 
 A trace follows a request as it travels through multiple services.
 
@@ -511,7 +511,7 @@ USE → Think resources/infrastructure
 
 ---
 
-## 11. Alerting 🚨
+## 11. Alerting 
 
 Monitoring without useful alerting can create another problem:
 
@@ -1257,6 +1257,6 @@ Prevent Recurrence
 
 ---
 
-**SRE Zero to Hero 🚀**
+**SRE Zero to Hero **
 
 **Learn → Practice → Break Things → Troubleshoot → Improve**
